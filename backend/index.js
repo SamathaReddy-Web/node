@@ -1,10 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 dotenv.config();
 
+app.use(cors());  // Enable CORS
 app.use(express.json());  //Middleware to parse JSON bodies
 // If missed this post put methods don't wor
 
